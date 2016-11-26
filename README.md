@@ -14,4 +14,6 @@ Use MakeRepo to generate a command line tool for creating remote GitHub repos.
 1. If the path is `/usr/local/bin/` or similar, `makerepo` can be called from any directory on command line
 1. `makerepo` will ask for the repo name and then add a new repo with that name onto your GitHub profile
 
+Big giant thanks to [John Sundell](https://github.com/JohnSundell) and [SwiftPlate](https://github.com/JohnSundell/SwiftPlate) for an extremely precious and informative example.
+
 Enjoy!
