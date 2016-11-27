@@ -2,7 +2,7 @@
 
 //
 //  main.swift
-//  MakeRepo
+//  MakeRepo v0.1.0
 //
 //  Created by Garric Nahapetian on 11/25/16.
 //  Credit to John Sundell and SwiftPlate: https://github.com/JohnSundell/SwiftPlate
@@ -129,7 +129,7 @@ do {
         try? fileManager.removeItem(atPath: temporaryDirectoryPath)
     }
 
-    try performCommand(description: "Making temporary directory at path") {
+    try performCommand(description: "Making temporary directory") {
         try fileManager.createDirectory(
             atPath: temporaryDirectoryPath,
             withIntermediateDirectories: false,
@@ -177,6 +177,7 @@ do {
     } else {
         print("You can now run ./makerepo from this directory. To run makerepo from any directory, move makeRepo to path: \(usrLocalBinPath) .")
     }
+    print("You can remove the cloned project now. Enjoy!")
 } catch {
     printError(error.localizedDescription)
 }
