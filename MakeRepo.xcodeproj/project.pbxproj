@@ -253,6 +253,7 @@
 				4E65F4711DE8FCA800F446C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

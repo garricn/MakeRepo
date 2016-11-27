@@ -1,6 +1,6 @@
 #!/usr/bin/swift
 
-/*
+/*  
  *  MakeRepo: https://github.com/garricn/MakeRepo
  *
  *  makeRepo.swift
@@ -30,7 +30,7 @@ import Foundation
 
 func createRepo(with name: String) throws {
     let process = Process()
-    process.launchPath = "//bin/zsh"
+    process.launchPath = "/bin/bash"
     process.arguments = [
         "-c",
         "curl -u \"{USERNAME}:{TOKEN}\" https://api.github.com/user/repos -d '{\"name\":\"\(name)\"}'"
@@ -43,12 +43,10 @@ print("👉  Enter name of repo then hit return")
 if let repoName = readLine(), !repoName.isEmpty {
     do {
         try createRepo(with: repoName)
+        print("💎  Created repo named: \(repoName)")
     } catch {
         print("Error: \(error)")
     }
-    print("💎  Created repo named: \(repoName)")
-    exit(0)
 } else {
     print("❌  Error: Repo name required.")
-    exit(0)
 }
