@@ -6,7 +6,7 @@ Use MakeRepo to generate a command line tool for creating remote GitHub repos.
 
 1. Clone
 1. cd into MakeRepo
-1. Run `./MakeRepo/main.swift` for the project's root
+1. Run `./MakeRepo/main.swift` from the project's root
 1. Provide:
   1. A path to export the tool (Default = `/usr/local/bin/`).
   1. Your GitHub username
