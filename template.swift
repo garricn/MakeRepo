@@ -33,7 +33,7 @@ func createRepo(with name: String) throws {
     process.launchPath = "/bin/bash"
     process.arguments = [
         "-c",
-        "curl -u \"{USERNAME}:{TOKEN}\" https://api.github.com/user/repos -d '{\"name\":\"\(name)\"}'"
+        "curl -u \"{USERNAME}:{TOKEN}\" https://api.github.com/user/repos -d '{\"name\":\"\(name)\"}' 2>&1 | grep \'clone_url\' | sed s/clone_url/Origin/"
     ]
     process.launch()
     process.waitUntilExit()
